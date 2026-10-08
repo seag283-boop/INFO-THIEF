@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASE | INFO THIEF</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/case.css">
+    <script src="./js/common.js" defer></script>
+    <script src="./js/case.js" defer></script>
+</head>
+
+<body class="case-page">
+    <div id="header"></div>
+    <main class="case">
+        <section class="case-section">
+            <div class="case-bg">
+                <img src="./img/case/CASE BG.png" alt="">
+            </div>
+
+            <div class="case-left">
+                <p class="case-number">04</p>
+                <p class="case-label">REAL CASE</p>
+                <h1 class="case-title">실제 사례로 보는<br><strong>개인정보 도둑</strong></h1>
+                <p class="case-description">우리 일상 속에서 일어나는 <br>실제 개인정보 유출 사례를 통해<br>어떤 위험이 있는지 확인해보세요.</p>
+            </div>
+
+            <div class="case-filter">
+                <button type="button" class="filter-button active" data-filter="all">전체</button>
+                <button type="button" class="filter-button" data-filter="sns">SNS</button>
+                <button type="button" class="filter-button" data-filter="shopping">온라인 쇼핑</button>
+                <button type="button" class="filter-button" data-filter="game">온라인 게임</button>
+                <button type="button" class="filter-button" data-filter="finance">금융 · 결제</button>
+                <button type="button" class="filter-button" data-filter="public">공공장소</button>
+            </div>
+
+            <div class="case-list">
+                <article class="case-card" data-category="sns" data-type="article" data-modal="case01">
+                    <div class="case-card-image">
+                        <img src="./img/case/sns.png" alt="">
+                        <span class="case-number">01</span>
+                    </div>
+                    <div class="case-card-content">
+                        <span class="case-category">SNS</span>
+                        <h2 class="case-card-title">여행 사진 한 장이<br>위치 정보를 노출하다.</h2>
+                        <p class="case-card-description">SNS에 올린 사진 속 위치 정보로 인해 집 주소와 일상이 노출된 사례입니다.</p>
+                        <button type="button" class="case-detail-button"
+                            data-modal-open="case01">자세히보기<span>→</span></button>
+                    </div>
+                </article>
+
+                <article class="case-card" data-category="shopping" data-type="article" data-modal="case02">
+                    <div class="case-card-image">
+                        <img src="./img/case/온라인 쇼핑.png" alt="">
+                        <span class="case-number">02</span>
+                    </div>
+                    <div class="case-card-content">
+                        <span class="case-category">SHOPPING</span>
+                        <h2 class="case-card-title">온라인 쇼핑으로<br>개인정보가 노출되다.</h2>
+                        <p class="case-card-description">택배 송장에 포함된 이름, 연락처, 주소가 무심코 노출된 사례입니다.</p>
+                        <button type="button" class="case-detail-button"
+                            data-modal-open="case02">자세히보기<span>→</span></button>
+                    </div>
+                </article>
+
+                <article class="case-card" data-category="game" data-type="video" data-modal="case03">
+                    <div class="case-card-image">
+                        <img src="./img/case/온라인 게임.png" alt="">
+                        <span class="case-number">03</span>
+                    </div>
+                    <div class="case-card-content">
+                        <span class="case-category">GAME</span>
+                        <h2 class="case-card-title">게임에서<br>개인정보가 유출되다.</h2>
+                        <p class="case-card-description">게임 서비스를 이용하는 과정에서 이용자의 개인정보가 유출된 사례입니다.</p>
+                        <button type="button" class="case-detail-button"
+                            data-modal-open="case03">자세히보기<span>→</span></button>
+                    </div>
+                </article>
+
+                <article class="case-card" data-category="finance" data-type="video" data-modal="case04">
+                    <div class="case-card-image">
+                        <img src="./img/case/피싱.png" alt="">
+                        <span class="case-number">04</span>
+                    </div>
+                    <div class="case-card-content">
+                        <span class="case-category">FINANCE</span>
+                        <h2 class="case-card-title">피싱 문자로<br>개인정보가 털리다.</h2>
+                        <p class="case-card-description">가짜 문자 링크를 통해 개인정보와 계정 정보가 탈취된 사례입니다.</p>
+                        <button type="button" class="case-detail-button"
+                            data-modal-open="case04">자세히보기<span>→</span></button>
+                    </div>
+                </article>
+
+                <article class="case-card extra-case" data-category="app" data-modal="case05" style="display: none;">
+                    <div class="case-card-image">
+                        <img src="./img/case/해킹 경고가 표시된 스마트폰.png" alt="앱 보안">
+                        <span class="case-number">05</span>
+                    </div>
+                    <div class="case-card-content">
+                        <span class="case-category">APP · SERVICE</span>
+                        <h3 class="case-card-title">앱의 허술한 보안이<br>개인정보를 유출하다.</h3>
+                        <p class="case-card-description">서비스의 보안 문제로<br>대규모 개인정보가 유출된 사례입니다.</p>
+                        <button type="button" class="case-detail-button" data-modal-open="case05">자세히 보기 →</button>
+                    </div>
+                </article>
+
+                <article class="case-card extra-case" data-category="cctv" data-modal="case06" style="display: none;">
+                    <div class="case-card-image">
+                        <img src="./img/case/감시 카메라와 CCTV 모니터 화면.png" alt="CCTV">
+                        <span class="case-number">06</span>
+                    </div>
+                    <div class="case-card-content">
+                        <span class="case-category">CCTV</span>
+                        <h3 class="case-card-title">CCTV 영상도<br>개인정보가 될 수 있다.</h3>
+                        <p class="case-card-description">촬영된 영상정보가 잘못 이용되거나<br>외부로 유출될 수 있는 사례입니다.</p>
+                        <button type="button" class="case-detail-button" data-modal-open="case06">자세히 보기 →</button>
+                    </div>
+                </article>
+
+                <article class="case-card extra-case" data-category="used" data-modal="case07" style="display: none;">
+                    <div class="case-card-image">
+                        <img src="./img/case/중고 거래 개인정보 노출 장면.png" alt="중고거래">
+                        <span class="case-number">07</span>
+                    </div>
+                    <div class="case-card-content">
+                        <span class="case-category">USED MARKET</span>
+                        <h3 class="case-card-title">중고거래 한 번에<br>개인정보까지 넘어가다.</h3>
+                        <p class="case-card-description">거래 과정에서 개인정보가 상대방에게<br>노출될 수 있는 사례입니다.</p>
+                        <button type="button" class="case-detail-button" data-modal-open="case07">자세히 보기 →</button>
+                    </div>
+                </article>
+
+                <article class="case-card extra-case" data-category="wifi" data-modal="case08" style="display: none;">
+                    <div class="case-card-image">
+                        <img src="./img/case/공용 와이파이의 위험 신호.png" alt="공공 Wi-Fi">
+                        <span class="case-number">08</span>
+                    </div>
+                    <div class="case-card-content">
+                        <span class="case-category">PUBLIC WI-FI</span>
+                        <h3 class="case-card-title">무료 Wi-Fi에 연결한 순간<br>개인정보가 위험해진다.</h3>
+                        <p class="case-card-description">보안이 취약한 공용 네트워크를 통해<br>개인정보가 노출될 수 있습니다.</p>
+                        <button type="button" class="case-detail-button" data-modal-open="case08">자세히 보기 →</button>
+                    </div>
+                </article>
+            </div>
+            <div class="case-more">
+                <button type="button" class="case-more-button">
+                    <span>더 많은 사례 보기</span><span>→</span>
+                </button>
+            </div>
+        </section>
+    </main>
+    <div id="footer"></div>
+
+    <div class="case-modal" id="case01" data-type="article" aria-hidden="true">
+        <div class="modal-dim"></div>
+        <div class="modal-content article-modal" role="dialog" aria-modal="true">
+            <button type="button" class="modal-close" aria-label="모달 닫기">×</button>
+            <div class="modal-image">
+                <img src="./img/case/sns.png" alt="SNS 개인정보 노출 사례">
+            </div>
+            <div class="modal-info">
+                <span class="modal-category">SNS</span>
+                <p class="modal-number">CASE 01</p>
+                <h2 class="modal-title">여행 사진 한 장이<br>위치 정보를 노출하다.</h2>
+                <div class="article-info">
+                    <p class="article-source">기사 출처</p>
+                    <h3 class="article-title"></h3>
+                    <p class="article-date"></p>
+                    <p class="article-description"></p>
+                    <a href="#" class="article-link" target="_blank" rel="noopener noreferrer">기사 원문
+                        보기<span>→</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="case-modal" id="case02" data-type="article" aria-hidden="true">
+        <div class="modal-dim"></div>
+        <div class="modal-content article-modal" role="dialog" aria-modal="true">
+            <button type="button" class="modal-close" aria-label="모달 닫기">×</button>
+            <div class="modal-image">
+                <img src="./img/case/온라인 쇼핑.png" alt="온라인 쇼핑 개인정보 노출 사례">
+            </div>
+            <div class="modal-info">
+                <span class="modal-category">온라인 쇼핑</span>
+                <p class="modal-number">CASE 02</p>
+                <h2 class="modal-title">온라인 쇼핑으로<br>개인정보가 노출되다.</h2>
+                <div class="article-info">
+                    <p class="article-source">기사 출처</p>
+                    <h3 class="article-title"></h3>
+                    <p class="article-date"></p>
+                    <p class="article-description"></p>
+                    <a href="#" class="article-link" target="_blank" rel="noopener noreferrer">기사 원문
+                        보기<span>→</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="case-modal" id="case03" data-type="video" aria-hidden="true">
+        <div class="modal-dim"></div>
+        <div class="modal-content video-modal" role="dialog" aria-modal="true">
+            <button type="button" class="modal-close" aria-label="영상 닫기">×</button>
+            <div class="video-wrapper">
+                <iframe class="youtube-frame" title="게임 개인정보 유출 관련 뉴스 영상" src=""
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <span class="modal-category">온라인 게임</span>
+                <p class="modal-number">CASE 03</p>
+                <p class="modal-source">youtube 서울경제tv</p>
+                <h2 class="modal-title">게임에서<br>개인정보가 유출되다.</h2>
+                <p class="video-description">게임 서비스를 이용하는 과정에서 개인정보가 유출된 실제 사례를 확인해보세요.</p>
+            </div>
+        </div>
+    </div>
+    <div class="case-modal" id="case04" data-type="video" aria-hidden="true">
+        <div class="modal-dim"></div>
+        <div class="modal-content video-modal" role="dialog" aria-modal="true">
+            <button type="button" class="modal-close" aria-label="영상 닫기">×</button>
+            <div class="video-wrapper">
+                <iframe class="youtube-frame" title="피싱 관련 뉴스 영상" src=""
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <span class="modal-category">금융 · 결제</span>
+                <p class="modal-number">CASE 04</p>
+                <p class="modal-source"> youtube 이슈픽zip</p>
+                <h2 class="modal-title">피싱 문자로<br>개인정보가 털리다.</h2>
+                <p class="video-description">개인정보 보호와 피싱 피해에 관련된 영상을 확인해보세요.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="case-modal" id="case05" data-type="article" aria-hidden="true">
+        <div class="modal-dim"></div>
+        <div class="modal-content article-modal" role="dialog" aria-modal="true">
+            <button type="button" class="modal-close" aria-label="모달 닫기">×</button>
+            <div class="modal-image">
+                <img src="./img/case/해킹 경고가 표시된 스마트폰.png" alt="앱 개인정보 유출 사례">
+            </div>
+            <div class="modal-info">
+                <span class="modal-category">APP · SERVICE</span>
+                <p class="modal-number">CASE 05</p>
+                <h2 class="modal-title">앱의 허술한 보안이<br>개인정보를 유출하다.</h2>
+                <div class="article-info">
+                    <p class="article-source">기사 출처</p>
+                    <h3 class="article-title"></h3>
+                    <p class="article-date"></p>
+                    <p class="article-description"></p>
+                    <a href="#" class="article-link" target="_blank" rel="noopener noreferrer">기사 원문
+                        보기<span>→</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="case-modal" id="case06" data-type="video" aria-hidden="true">
+        <div class="modal-dim"></div>
+        <div class="modal-content video-modal" role="dialog" aria-modal="true">
+            <button type="button" class="modal-close" aria-label="영상 닫기">×</button>
+            <div class="video-wrapper">
+                <iframe class="youtube-frame" title="CCTV 개인정보 유출 관련 뉴스 영상" src=""
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <span class="modal-category">CCTV</span>
+                <p class="modal-number">CASE 06</p>
+                <p class="modal-source"> YouTube JTBC</p>
+                <h2 class="modal-title">CCTV 영상도<br>개인정보가 될 수 있다.</h2>
+                <p class="video-description">CCTV 영상이 개인정보로 활용되거나 잘못 이용될 수 있는 실제 사례를 확인해보세요.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="case-modal" id="case07" data-type="video" aria-hidden="true">
+        <div class="modal-dim"></div>
+        <div class="modal-content video-modal" role="dialog" aria-modal="true">
+            <button type="button" class="modal-close" aria-label="영상 닫기">×</button>
+            <div class="video-wrapper">
+                <iframe class="youtube-frame" title="중고거래 개인정보 유출 관련 뉴스 영상" src=""
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <span class="modal-category">USED MARKET</span>
+                <p class="modal-number">CASE 07</p>
+                <p class="modal-source"> YouTube SBS</p>
+                <h2 class="modal-title">중고거래 한 번에<br>개인정보까지 넘어가다.</h2>
+                <p class="video-description">중고거래 과정에서 개인정보가 노출될 수 있는 실제 사례를 확인해보세요.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="case-modal" id="case08" data-type="article" aria-hidden="true">
+        <div class="modal-dim"></div>
+        <div class="modal-content article-modal" role="dialog" aria-modal="true">
+            <button type="button" class="modal-close" aria-label="모달 닫기">×</button>
+            <div class="modal-image">
+                <img src="./img/case/공용 와이파이의 위험 신호.png" alt="공공 Wi-Fi 개인정보 노출 사례">
+            </div>
+            <div class="modal-info">
+                <span class="modal-category">PUBLIC WI-FI</span>
+                <p class="modal-number">CASE 08</p>
+                <h2 class="modal-title">무료 Wi-Fi에 연결한 순간<br>개인정보가 위험해진다.</h2>
+                <div class="article-info">
+                    <p class="article-source">기사 출처</p>
+                    <h3 class="article-title"></h3>
+                    <p class="article-date"></p>
+                    <p class="article-description"></p>
+                    <a href="#" class="article-link" target="_blank" rel="noopener noreferrer">기사 원문
+                        보기<span>→</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,806 @@
+@charset "UTF-8";
+@import url(reset.css);
+@import url(font.css);
+
+body {
+    background: #08090b;
+    color: #E7E8EA;
+    font-family: 'Pretendard', sans-serif;
+}
+
+
+/* CASE */
+
+.case {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.case-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #08090b;
+}
+
+
+/* BACKGROUND */
+
+.case-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.case-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg,
+            rgba(0, 0, 0, 0.45) 0%,
+            rgba(0, 0, 0, 0.12) 55%,
+            rgba(0, 0, 0, 0.28) 100%);
+}
+
+.case-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* LEFT CONTENT */
+
+.case-left {
+    position: absolute;
+    top: 118px;
+    left: 6%;
+    z-index: 3;
+    width: 500px;
+}
+
+.case-number {
+    margin-bottom: 12px;
+    color: #FC4A52;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.case-label {
+    margin-bottom: 12px;
+    color: #FC4A52;
+    font-size: 22px;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 0.08em;
+}
+
+.case-title {
+    margin: 0;
+    color: #E7E8EA;
+    font-size: 66px;
+    font-weight: 800;
+    line-height: 1.04;
+    letter-spacing: -0.065em;
+    font-style: italic;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.case-title strong {
+    color: #FC4A52;
+    font-weight: 800;
+}
+
+.case-description {
+    margin-top: 27px;
+    color: #E7E8EA;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.65;
+    letter-spacing: -0.035em;
+    font-style: italic;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.55);
+}
+
+.extra-case {
+    display: none;
+}
+
+/* FILTER */
+
+.case-filter {
+    position: absolute;
+    top: 445px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: max-content;
+    z-index: 10;
+}
+
+.filter-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 155px;
+    height: 49px;
+    padding: 0;
+
+    border: 1px solid rgba(231, 232, 234, 0.8);
+    border-radius: 28px;
+
+    background: rgba(8, 9, 11, 0.88);
+    color: #E7E8EA;
+
+    font-family: 'Pretendard', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease;
+}
+
+/* 선택된 상태도 기본은 검정 */
+
+.filter-button.active {
+    background: rgba(8, 9, 11, 0.88);
+    border-color: rgba(231, 232, 234, 0.8);
+    color: #E7E8EA;
+}
+
+/* 마우스를 올렸을 때만 빨간색 */
+
+.filter-button:hover,
+.filter-button.active:hover {
+    background: #FC4A52;
+    border-color: #FC4A52;
+    color: #08090b;
+}
+
+
+/* CASE LIST */
+
+.case-list {
+    position: absolute;
+    top: 516px;
+    left: 5.6%;
+    z-index: 4;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+
+    width: calc(100% - 11.2%);
+}
+
+
+/* CASE CARD */
+
+.case-card {
+    position: relative;
+
+    width: 100%;
+    height: 358px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(231, 232, 234, 0.65);
+    border-radius: 20px;
+
+    background: #08090b;
+
+    cursor: pointer;
+
+    isolation: isolate;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.case-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(252, 74, 82, 0.9);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ==================================================
+   CARD IMAGE
+================================================== */
+
+.case-card-image {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+
+/* 카드 위에 그라데이션 */
+
+.case-card-image::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(180deg,
+            rgba(0, 0, 0, 0.15) 0%,
+            rgba(0, 0, 0, 0.25) 20%,
+            rgba(0, 0, 0, 0.45) 40%,
+            rgba(0, 0, 0, 0.88) 65%,
+            rgba(8, 9, 11, 1.8) 100%);
+
+    pointer-events: none;
+}
+
+
+/* 이미지 */
+
+.case-card-image img {
+    position: relative;
+    z-index: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.5s ease;
+}
+
+
+/* 이미지 hover */
+
+.case-card:hover .case-card-image img {
+    transform: scale(1.04);
+}
+
+
+/* 카드 번호 */
+
+.case-card-image .case-number {
+    position: absolute;
+
+    top: 18px;
+    left: 20px;
+
+    z-index: 2;
+
+    color: #E7E8EA;
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+
+/* CARD CONTENT */
+
+.case-card-content {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 50px;
+    z-index: 3;
+}
+
+.case-category {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 68px;
+    height: 29px;
+
+    padding: 0 13px;
+
+    border-radius: 20px;
+
+    background: #FC4A52;
+    color: #08090b;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+
+.case-card-title {
+    margin-top: 10px;
+
+    color: #F2F2F3;
+
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.055em;
+}
+
+.case-card-description {
+    margin-top: 10px;
+
+    max-width: 390px;
+
+    color: rgba(231, 232, 234, 0.82);
+
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.55;
+    letter-spacing: -0.035em;
+}
+
+
+/* DETAIL BUTTON */
+
+.case-detail-button {
+    position: absolute;
+    right: 0;
+    bottom: -30px;
+
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    color: #FC4A52;
+
+    font-family: 'Pretendard', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.case-detail-button span {
+    font-size: 17px;
+    font-weight: 300;
+
+    transition: transform 0.3s ease;
+}
+
+.case-detail-button:hover {
+    color: #FFFFFF;
+}
+
+.case-detail-button:hover span {
+    transform: translateX(5px);
+}
+
+
+/* MORE BUTTON */
+
+.case-more {
+    position: absolute;
+    right: 5.6%;
+    bottom: 32px;
+    z-index: 5;
+}
+
+.case-more-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: rgba(231, 232, 234, 0.85);
+
+    font-family: 'Pretendard', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+
+    transition: color 0.3s ease;
+}
+
+.case-more-button span:last-child {
+    color: #FC4A52;
+    font-size: 18px;
+
+    transition: transform 0.3s ease;
+}
+
+.case-more-button:hover {
+    color: #FFFFFF;
+}
+
+.case-more-button:hover span:last-child {
+    transform: translateX(5px);
+}
+
+
+/* MODAL */
+
+.case-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    visibility: hidden;
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+}
+
+.case-modal.active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* MODAL DIM */
+
+.modal-dim {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.78);
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* MODAL CONTENT */
+
+.modal-content {
+    position: relative;
+    z-index: 2;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(231, 232, 234, 0.55);
+    border-radius: 24px;
+
+    background: #101115;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.65);
+
+    transform: translateY(25px) scale(0.97);
+
+    transition: transform 0.35s ease;
+}
+
+.case-modal.active .modal-content {
+    transform: translateY(0) scale(1);
+}
+
+
+/* MODAL CLOSE */
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid rgba(231, 232, 234, 0.7);
+    border-radius: 50%;
+
+    background: rgba(8, 9, 11, 0.7);
+
+    color: #E7E8EA;
+
+    font-size: 25px;
+    font-weight: 200;
+    line-height: 1;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.modal-close:hover {
+    border-color: #FC4A52;
+    background: #FC4A52;
+    color: #08090b;
+}
+
+
+/* ARTICLE MODAL */
+
+.article-modal {
+    display: grid;
+    grid-template-columns: 430px 1fr;
+
+    width: 1000px;
+    min-height: 580px;
+}
+
+
+/* ARTICLE IMAGE */
+
+.article-modal .modal-image {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+.article-modal .modal-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(90deg,
+            transparent 65%,
+            #101115 100%);
+}
+
+.article-modal .modal-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* ARTICLE INFO */
+
+.article-modal .modal-info {
+    padding: 65px 55px 50px;
+}
+
+.modal-category {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 68px;
+    height: 30px;
+
+    padding: 0 14px;
+
+    border-radius: 20px;
+
+    background: #FC4A52;
+    color: #08090b;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.modal-number {
+    margin-top: 18px;
+
+    color: rgba(231, 232, 234, 0.45);
+
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+.modal-title {
+    margin-top: 10px;
+
+    color: #F1F1F2;
+
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -0.055em;
+}
+
+
+/* ARTICLE INFORMATION */
+
+.article-info {
+    margin-top: 28px;
+    padding-top: 23px;
+
+    border-top: 1px solid rgba(231, 232, 234, 0.15);
+}
+
+.article-source {
+    color: #FC4A52;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.article-title {
+    margin-top: 8px;
+
+    color: #E7E8EA;
+
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.04em;
+}
+
+.article-date {
+    margin-top: 7px;
+
+    color: rgba(231, 232, 234, 0.45);
+
+    font-size: 12px;
+}
+
+.article-description {
+    margin-top: 18px;
+
+    color: rgba(231, 232, 234, 0.75);
+
+    font-size: 14px;
+    line-height: 1.65;
+    letter-spacing: -0.035em;
+}
+
+.article-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 25px;
+    padding: 13px 20px;
+
+    border: 1px solid rgba(231, 232, 234, 0.55);
+    border-radius: 25px;
+
+    color: #E7E8EA;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.article-link span {
+    color: #FC4A52;
+    font-size: 17px;
+}
+
+.article-link:hover {
+    border-color: #FC4A52;
+    background: #FC4A52;
+    color: #08090b;
+}
+
+.article-link:hover span {
+    color: #08090b;
+}
+
+
+/* VIDEO MODAL */
+
+.video-modal {
+    width: 1000px;
+    padding: 0;
+
+    background: #0D0E11;
+}
+
+
+/* YOUTUBE */
+
+.video-wrapper {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    background: #000;
+}
+
+.youtube-frame {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+}
+
+
+/* VIDEO INFO */
+
+.video-info {
+    padding: 28px 40px 35px;
+}
+
+.video-info .modal-number {
+    margin-top: 14px;
+}
+
+.video-info .modal-title {
+    margin-top: 8px;
+    font-size: 25px;
+}
+
+.video-description {
+    margin-top: 10px;
+
+    color: rgba(231, 232, 234, 0.65);
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* MODAL BODY LOCK */
+
+body.modal-open {
+    overflow: hidden;
+}
+
+
+/* FILTER HIDDEN */
+
+.case-card.hidden {
+    display: none;
+}
+
+
+/* ACTIVE MENU */
+
+.case-page .gnb a[href="./case.html"] {
+    color: #E7E8EA;
+}
+
+.case-page .gnb a[href="./case.html"]::after {
+    width: 100%;
+}
+
+.video-info p.modal-source {
+    display: block;
+    margin: 8px 0 0;
+    color: #FC4A52 !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    line-height: 1.5;
+    letter-spacing: 0;
+}

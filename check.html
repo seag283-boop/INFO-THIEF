@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHECK | INFO THIEF</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/check.css">
+
+    <script src="./js/common.js" defer></script>
+    <script src="./js/check.js" defer></script>
+</head>
+
+<body class="check-page">
+
+    <div id="header"></div>
+
+    <main class="check">
+
+        <section class="check-section">
+
+            <!-- BACKGROUND -->
+            <div class="check-bg">
+                <img src="./img/check/CHECK BG.png" alt="">
+            </div>
+
+            <!-- LEFT CONTENT -->
+            <div class="check-left">
+
+                <div class="check-number">02</div>
+
+                <p class="check-label">PRIVACY TEST</p>
+
+                <h1 class="check-title">
+                    나는<br>
+                    <strong>개인정보를</strong><br>
+                    얼마나 잘<br>
+                    지키고 있을까?
+                </h1>
+
+                <p class="check-description">
+                    10개의 질문을 통해<br>
+                    나의 개인정보 보호 습관을 확인해보세요.<br>
+                    작은 습관이 큰 차이를 만듭니다.
+                </p>
+
+            </div>
+
+            <!-- TEST AREA -->
+            <div class="check-test">
+
+                <!-- TEST HEADER -->
+                <div class="test-header">
+
+                    <div class="question-number">
+                        <span>Q</span><strong id="currentQuestion">1</strong><span>.</span>
+                    </div>
+
+                    <div class="question-progress">
+
+                        <div class="progress-count">
+                            <span id="progressCurrent">1</span>
+                            <span>/</span>
+                            <span id="progressTotal">10</span>
+                        </div>
+
+                        <div class="progress-bar">
+                            <span id="progressFill"></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- SWIPER -->
+                <div class="test-slider">
+
+                    <div class="test-track" id="testTrack">
+
+                        <!-- QUESTION 01 -->
+                        <article class="question-card" data-question="1">
+
+                            <div class="question-content">
+
+                                <div class="question-text">
+                                    SNS에 현재 위치가 보이는 사진을<br>
+                                    자주 올린다.
+                                </div>
+
+                                <div class="question-body">
+
+                                    <div class="question-image">
+                                        <img src="./img/check/부산 해운대 셀카 여행 포스트.png" alt="SNS 위치정보 노출">
+                                    </div>
+
+                                    <div class="answer-list">
+
+                                        <button type="button" class="answer-button" data-answer="yes">
+                                            <span class="answer-check">✓</span>
+                                            <span>그렇다</span>
+                                        </button>
+
+                                        <button type="button" class="answer-button" data-answer="no">
+                                            <span class="answer-check"></span>
+                                            <span>아니다</span>
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                        <!-- QUESTION 02 -->
+                        <article class="question-card" data-question="2">
+
+                            <div class="question-content">
+
+                                <div class="question-text">
+                                    여러 사이트에서 같은 비밀번호를<br>
+                                    사용하고 있다.
+                                </div>
+
+                                <div class="question-body">
+
+                                    <div class="question-image">
+                                        <img src="./img/check/여러 화면 속 반복된 비밀번호와 해커 캐릭터.png" alt="비밀번호 관리">
+                                    </div>
+
+                                    <div class="answer-list">
+
+                                        <button type="button" class="answer-button" data-answer="yes">
+                                            <span class="answer-check">✓</span>
+                                            <span>그렇다</span>
+                                        </button>
+
+                                        <button type="button" class="answer-button" data-answer="no">
+                                            <span class="answer-check"></span>
+                                            <span>아니다</span>
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                        <!-- QUESTION 03 -->
+                        <article class="question-card" data-question="3">
+
+                            <div class="question-content">
+
+                                <div class="question-text">
+                                    온라인 쇼핑을 할 때 배송지와<br>
+                                    개인정보를 확인하지 않고 저장한다.
+                                </div>
+
+                                <div class="question-body">
+
+                                    <div class="question-image">
+                                        <img src="./img/check/개인정보를 노리는 온라인 쇼핑 도둑.png" alt="온라인 쇼핑 개인정보">
+                                    </div>
+
+                                    <div class="answer-list">
+
+                                        <button type="button" class="answer-button" data-answer="yes">
+                                            <span class="answer-check">✓</span>
+                                            <span>그렇다</span>
+                                        </button>
+
+                                        <button type="button" class="answer-button" data-answer="no">
+                                            <span class="answer-check"></span>
+                                            <span>아니다</span>
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                        <!-- QUESTION 04 -->
+                        <article class="question-card" data-question="4">
+
+                            <div class="question-content">
+
+                                <div class="question-text">
+                                    출처가 불분명한 링크나 이벤트를<br>
+                                    별다른 확인 없이 클릭한다.
+                                </div>
+
+                                <div class="question-body">
+
+                                    <div class="question-image">
+                                        <img src="./img/check/수상한 링크를 노리는 사이버 도둑.png" alt="의심스러운 링크">
+                                    </div>
+
+                                    <div class="answer-list">
+
+                                        <button type="button" class="answer-button" data-answer="yes">
+                                            <span class="answer-check">✓</span>
+                                            <span>그렇다</span>
+                                        </button>
+
+                                        <button type="button" class="answer-button" data-answer="no">
+                                            <span class="answer-check"></span>
+                                            <span>아니다</span>
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                        <!-- QUESTION 05 -->
+                        <article class="question-card" data-question="5">
+
+                            <div class="question-content">
+
+                                <div class="question-text">
+                                    사용하지 않는 오래된 SNS 계정을<br>
+                                    그대로 두고 있다.
+                                </div>
+
+                                <div class="question-body">
+
+                                    <div class="question-image">
+                                        <img src="./img/check/잊힌 SNS 계정 정리 작전.png" alt="사용하지 않는 계정">
+                                    </div>
+
+                                    <div class="answer-list">
+
+                                        <button type="button" class="answer-button" data-answer="yes">
+                                            <span class="answer-check">✓</span>
+                                            <span>그렇다</span>
+                                        </button>
+
+                                        <button type="button" class="answer-button" data-answer="no">
+                                            <span class="answer-check"></span>
+                                            <span>아니다</span>
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                        <!-- QUESTION 06 -->
+                        <article class="question-card" data-question="6">
+
+                            <div class="question-content">
+
+                                <div class="question-text">
+                                    공공장소의 무료 Wi-Fi를<br>
+                                    아무 생각 없이 사용한다.
+                                </div>
+
+                                <div class="question-body">
+
+                                    <div class="question-image">
+                                        <img src="./img/check/공용 와이파이의 위험성.png" alt="공공 Wi-Fi">
+                                    </div>
+
+                                    <div class="answer-list">
+
+                                        <button type="button" class="answer-button" data-answer="yes">
+                                            <span class="answer-check">✓</span>
+                                            <span>그렇다</span>
+                                        </button>
+
+                                        <button type="button" class="answer-button" data-answer="no">
+                                            <span class="answer-check"></span>
+                                            <span>아니다</span>
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                        <!-- QUESTION 07 -->
+                        <article class="question-card" data-question="7">
+
+                            <div class="question-content">
+
+                                <div class="question-text">
+                                    앱을 설치할 때 요구하는 권한을<br>
+                                    확인하지 않고 허용한다.
+                                </div>
+
+                                <div class="question-body">
+
+                                    <div class="question-image">
+                                        <img src="./img/check/앱 권한 허용을 누르는 밤의 해커.png" alt="앱 권한">
+                                    </div>
+
+                                    <div class="answer-list">
+
+                                        <button type="button" class="answer-button" data-answer="yes">
+                                            <span class="answer-check">✓</span>
+                                            <span>그렇다</span>
+                                        </button>
+
+                                        <button type="button" class="answer-button" data-answer="no">
+                                            <span class="answer-check"></span>
+                                            <span>아니다</span>
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                        <!-- QUESTION 08 -->
+                        <article class="question-card" data-question="8">
+
+                            <div class="question-content">
+
+                                <div class="question-text">
+                                    온라인 게임에서 이름이나 학교 등<br>
+                                    개인정보를 다른 사람에게 알려준다.
+                                </div>
+
+                                <div class="question-body">
+
+                                    <div class="question-image">
+                                        <img src="./img/check/온라인 게임 개인정보 과공유 경고 장면.png" alt="온라인 게임 개인정보">
+                                    </div>
+
+                                    <div class="answer-list">
+
+                                        <button type="button" class="answer-button" data-answer="yes">
+                                            <span class="answer-check">✓</span>
+                                            <span>그렇다</span>
+                                        </button>
+
+                                        <button type="button" class="answer-button" data-answer="no">
+                                            <span class="answer-check"></span>
+                                            <span>아니다</span>
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                        <!-- QUESTION 09 -->
+                        <article class="question-card" data-question="9">
+
+                            <div class="question-content">
+
+                                <div class="question-text">
+                                    검색 기록이나 방문 기록을<br>
+                                    별도로 관리하지 않는다.
+                                </div>
+
+                                <div class="question-body">
+
+                                    <div class="question-image">
+                                        <img src="./img/check/뒤죽박죽 방문 기록의 밤.png" alt="검색 기록">
+                                    </div>
+
+                                    <div class="answer-list">
+
+                                        <button type="button" class="answer-button" data-answer="yes">
+                                            <span class="answer-check">✓</span>
+                                            <span>그렇다</span>
+                                        </button>
+
+                                        <button type="button" class="answer-button" data-answer="no">
+                                            <span class="answer-check"></span>
+                                            <span>아니다</span>
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                        <!-- QUESTION 10 -->
+                        <article class="question-card" data-question="10">
+
+                            <div class="question-content">
+
+                                <div class="question-text">
+                                    개인정보가 포함된 사진이나 문서를<br>
+                                    삭제할 때도 그대로 버린다.
+                                </div>
+
+                                <div class="question-body">
+
+                                    <div class="question-image">
+                                        <img src="./img/check/개인정보를 버리는 익명의 도둑.png" alt="개인정보 문서">
+                                    </div>
+
+                                    <div class="answer-list">
+
+                                        <button type="button" class="answer-button" data-answer="yes">
+                                            <span class="answer-check">✓</span>
+                                            <span>그렇다</span>
+                                        </button>
+
+                                        <button type="button" class="answer-button" data-answer="no">
+                                            <span class="answer-check"></span>
+                                            <span>아니다</span>
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+                <!-- SWIPE BUTTON -->
+                <button type="button" class="slider-button slider-prev" aria-label="이전 질문">
+                    ←
+                </button>
+
+                <button type="button" class="slider-button slider-next" aria-label="다음 질문">
+                    →
+                </button>
+
+            </div>
+
+            <!-- QUESTION NAVIGATION -->
+            <div class="question-nav">
+
+                <button type="button" class="question-nav-item" data-question="1">
+                    01
+                </button>
+
+                <button type="button" class="question-nav-item" data-question="2">
+                    02
+                </button>
+
+                <button type="button" class="question-nav-item active" data-question="3">
+                    03
+                </button>
+
+                <button type="button" class="question-nav-item" data-question="4">
+                    04
+                </button>
+
+                <button type="button" class="question-nav-item" data-question="5">
+                    05
+                </button>
+
+                <button type="button" class="question-nav-item" data-question="6">
+                    06
+                </button>
+
+                <button type="button" class="question-nav-item" data-question="7">
+                    07
+                </button>
+
+                <button type="button" class="question-nav-item" data-question="8">
+                    08
+                </button>
+
+                <button type="button" class="question-nav-item" data-question="9">
+                    09
+                </button>
+
+                <button type="button" class="question-nav-item" data-question="10">
+                    10
+                </button>
+
+            </div>
+
+            <!-- MOBILE SWIPE HINT -->
+            <p class="swipe-hint">
+                ← 좌우로 넘겨보세요 →
+            </p>
+
+        </section>
+
+    </main>
+    <div id="footer"></div>
+</body>
+
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RESULT | INFO THIEF</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/result.css">
+
+    <script src="./js/common.js" defer></script>
+    <script src="./js/result.js" defer></script>
+</head>
+
+<body class="result-page">
+
+    <div id="header"></div>
+
+    <main class="result">
+
+        <section class="result-section">
+
+            <!-- BACKGROUND -->
+            <div class="result-bg">
+                <img src="./img/result/CHECK 2 bg.png" alt="">
+            </div>
+
+
+            <!-- LEFT CONTENT -->
+            <div class="result-left">
+
+                <p class="result-number">03</p>
+
+                <p class="result-label">
+                    TEST RESULT
+                </p>
+
+                <h1 class="result-title">
+                    당신의<br>
+                    <strong>개인정보 보호</strong><br>
+                    유형은?
+                </h1>
+
+                <p class="result-description">
+                    테스트 결과를 통해<br>
+                    당신의 개인정보 보호 유형과<br>
+                    맞춤형 TIP을 확인해보세요.
+                </p>
+
+
+
+            </div>
+
+
+            <!-- RESULT CONTENT -->
+            <div class="result-content">
+
+
+                <!-- SCORE PANEL -->
+                <section class="score-panel">
+
+                    <div class="score-top">
+
+                        <div class="score-area">
+
+                            <p class="score-label">
+                                당신의 점수는
+                            </p>
+
+                            <div class="score">
+                                <strong id="resultScore">69</strong>
+                                <span>점</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="result-type-area">
+
+                            <div class="result-type">
+                                <span id="resultType">
+                                    개인정보 관심형
+                                </span>
+                            </div>
+
+                            <h2 id="resultTitle">
+                                기본적인 보호 습관을 가지고 있지만,<br>
+                                조금만 더 신경 쓰면<br>
+                                더 안전하게 지킬 수 있어요.
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TYPE SELECT -->
+                    <div class="type-list">
+
+                        <!-- 초보형 -->
+                        <article class="type-card" data-type="초보형">
+
+                            <div class="type-image">
+                                <img src="./img/result/개인정보 초보형.png" alt="개인정보 초보형">
+                            </div>
+
+                            <div class="type-name">
+                                개인정보<br>
+                                초보형
+                            </div>
+
+                            <p class="type-score">
+                                0 - 40점
+                            </p>
+
+                        </article>
+
+
+                        <!-- 관심형 -->
+                        <article class="type-card active" data-type="관심형">
+
+                            <div class="type-image">
+                                <img src="./img/result/개인정보 관심형.png" alt="개인정보 관심형">
+                            </div>
+
+                            <div class="type-name">
+                                개인정보<br>
+                                관심형
+                            </div>
+
+                            <p class="type-score">
+                                41 - 70점
+                            </p>
+
+                        </article>
+
+
+                        <!-- 지킴이형 -->
+                        <article class="type-card" data-type="지킴이형">
+
+                            <div class="type-image">
+                                <img src="./img/result/개인정보 지킴이형.png" alt="개인정보 지킴이형">
+                            </div>
+
+                            <div class="type-name">
+                                개인정보<br>
+                                지킴이형
+                            </div>
+
+                            <p class="type-score">
+                                71 - 90점
+                            </p>
+
+                        </article>
+
+
+                        <!-- 마스터형 -->
+                        <article class="type-card" data-type="마스터형">
+
+                            <div class="type-image">
+                                <img src="./img/result/개인정보 마스터형.png" alt="개인정보 마스터형">
+                            </div>
+
+                            <div class="type-name">
+                                개인정보<br>
+                                마스터형
+                            </div>
+
+                            <p class="type-score">
+                                91 - 100점
+                            </p>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- BUTTONS -->
+                    <div class="result-buttons">
+
+                        <button type="button" class="result-button retry-button" id="retryButton">
+
+                            <span class="button-icon">
+                                ↻
+                            </span>
+
+                            <span>
+                                다시 테스트하기
+                            </span>
+
+                        </button>
+
+
+                        <a href="./tip.html" class="result-button tip-button">
+
+                            <span>
+                                맞춤 TIP 확인하기
+                            </span>
+
+                            <span class="button-arrow">
+                                →
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+                <!-- TIP PANEL -->
+                <section class="tip-panel">
+
+                    <div class="tip-panel-head">
+
+                        <div class="tip-icon">
+                            💡
+                        </div>
+
+                        <div>
+
+                            <p class="tip-small-title">
+                                나에게 필요한
+                            </p>
+
+                            <h2>
+                                개인정보 보호 TIP
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="tip-description">
+                        당신의 유형에 맞는 TIP을 확인하고<br>
+                        실천해보세요!
+                    </p>
+
+
+                    <div class="tip-list">
+
+
+                        <!-- TIP 01 -->
+                        <a href="./tip.html" class="tip-item">
+
+                            <div class="tip-image">
+                                <img src="./img/result/비밀번호 관리.png" alt="비밀번호 관리">
+                            </div>
+
+                            <div class="tip-text">
+
+                                <h3>
+                                    비밀번호 관리
+                                </h3>
+
+                                <p>
+                                    사이트마다 다른 비밀번호를 사용해요.
+                                </p>
+
+                            </div>
+
+                            <span class="tip-arrow">
+                                →
+                            </span>
+
+                        </a>
+
+                        <!-- TIP 02 -->
+                        <a href="./tip.html" class="tip-item">
+
+                            <div class="tip-image">
+                                <img src="./img/result/피싱 경고 아이콘 3D 일러스트.png" alt="의심스러운 링크 주의">
+                            </div>
+
+                            <div class="tip-text">
+
+                                <h3>
+                                    의심스러운 링크 주의
+                                </h3>
+
+                                <p>
+                                    출처가 불분명한 링크는 클릭하지 않아요.
+                                </p>
+
+                            </div>
+
+                            <span class="tip-arrow">
+                                →
+                            </span>
+
+                        </a>
+                        <!-- TIP 02 -->
+                        <a href="./tip.html" class="tip-item">
+
+                            <div class="tip-image">
+                                <img src="./img/result/앱 권한 확인.png" alt="앱 권한 확인">
+                            </div>
+
+                            <div class="tip-text">
+
+                                <h3>
+                                    앱 권한 확인
+                                </h3>
+
+                                <p>
+                                    앱 설치 시 접근 권한을 꼭 확인해요.
+                                </p>
+
+                            </div>
+
+                            <span class="tip-arrow">
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <!-- TIP 03 -->
+                        <a href="./tip.html" class="tip-item">
+
+                            <div class="tip-image">
+                                <img src="./img/result/위치정보 관리.png" alt="위치정보 관리">
+                            </div>
+
+                            <div class="tip-text">
+
+                                <h3>
+                                    위치정보 관리
+                                </h3>
+
+                                <p>
+                                    SNS에 위치가 포함된 사진은 주의해요.
+                                </p>
+
+                            </div>
+
+                            <span class="tip-arrow">
+                                →
+                            </span>
+
+                        </a>
+                        <!-- TIP 04 -->
+                        <a href="./tip.html" class="tip-item">
+
+                            <div class="tip-image">
+                                <img src="./img/result/브라우저 기록 정리 아이콘.png" alt="검색 기록 관리">
+                            </div>
+
+                            <div class="tip-text">
+
+                                <h3>
+                                    검색 기록 관리
+                                </h3>
+
+                                <p>
+                                    검색 기록과 방문 기록을 주기적으로 정리해요.
+                                </p>
+
+                            </div>
+
+                            <span class="tip-arrow">
+                                →
+                            </span>
+
+                        </a>
+
+                        <!-- TIP 04 -->
+                        <a href="./tip.html" class="tip-item">
+
+                            <div class="tip-image">
+                                <img src="./img/result/사용하지 않는 계정 정리.png" alt="사용하지 않는 계정 정리">
+                            </div>
+
+                            <div class="tip-text">
+
+                                <h3>
+                                    사용하지 않는 계정 정리
+                                </h3>
+
+                                <p>
+                                    오래된 계정은 삭제해요.
+                                </p>
+
+                            </div>
+
+                            <span class="tip-arrow">
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <!-- TIP 05 -->
+                        <a href="./tip.html" class="tip-item">
+
+                            <div class="tip-image">
+                                <img src="./img/result/사진 업로드 주의.png" alt="사진 업로드 주의">
+                            </div>
+
+                            <div class="tip-text">
+
+                                <h3>
+                                    사진 업로드 주의
+                                </h3>
+
+                                <p>
+                                    주변 정보가 노출되지 않도록 확인해요.
+                                </p>
+
+                            </div>
+
+                            <span class="tip-arrow">
+                                →
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </section>
+
+    </main>
+    <div id="footer"></div>
+</body>
+
+</html>

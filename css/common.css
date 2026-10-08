@@ -1,0 +1,215 @@
+@charset "UTF-8";
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 10;
+    background: rgba(8, 9, 11, 0.55);
+}
+
+.header-inner {
+    width: calc(100% - 120px);
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    display: block;
+    width: 42px;
+    height: 42px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    font-family: 'SokchoSeaHandwritingFont';
+}
+
+.gnb {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.gnb ul {
+    display: flex;
+    align-items: center;
+    gap: 52px;
+}
+
+.gnb a {
+    position: relative;
+    font-family: 'Pretendard';
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: #E7E8EA;
+    transition: color 0.3s ease;
+}
+
+.gnb a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 1px;
+    background: #FC4A52;
+    transition: width 0.3s ease;
+}
+
+.gnb a:hover {
+    color: #FC4A52;
+}
+
+.gnb a:hover::after {
+    width: 100%;
+}
+
+.header-util {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.search-btn,
+.menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    color: #E7E8EA;
+}
+
+.search-btn svg {
+    width: 21px;
+    height: 21px;
+}
+
+.search-btn circle,
+.search-btn line {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+}
+
+.menu-btn {
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-btn span {
+    display: block;
+    width: 22px;
+    height: 1px;
+    background: #E7E8EA;
+    transition: 0.3s ease;
+}
+
+.menu-btn:hover span {
+    background: #FC4A52;
+}
+
+/* FOOTER */
+.footer {
+    width: 100%;
+    background: #08090B;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    width: 90%;
+    min-height: 210px;
+    margin: 0 auto;
+    padding: 45px 0;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-logo img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}
+
+.footer-logo span {
+    color: #F2F2F3;
+    font-family: 'SokchoSeaHandwritingFont';
+
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.footer-brand p {
+    color: rgba(231, 232, 234, 0.5);
+    font-size: 13px;
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.footer-nav a {
+    color: rgba(231, 232, 234, 0.7);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #FC4A52;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.footer-info p {
+    color: rgba(231, 232, 234, 0.3);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-align: right;
+}

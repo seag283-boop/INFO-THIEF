@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIP | INFO THIEF</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/tip.css">
+    <script src="./js/common.js" defer></script>
+    <script src="./js/tip.js" defer></script>
+</head>
+
+<body class="tip-page">
+    <div id="header"></div>
+    <main class="tip">
+        <section class="tip-section">
+            <div class="tip-bg">
+                <img src="./img/tip/TIP BG.png" alt="">
+            </div>
+            <div class="tip-left">
+                <p class="tip-number">05</p>
+                <p class="tip-label">PROTECTION TIP</p>
+                <h1 class="tip-title">지금부터는<br><strong>지킬 차례</strong>입니다.</h1>
+                <p class="tip-description">작은 습관의 변화가<br>당신의 개인정보를 지킬 수 있습니다.<br>지금 바로 실천해보세요.</p>
+            </div>
+            <div class="tip-list">
+                <article class="tip-card" data-modal="tip01">
+                    <div class="tip-card-image">
+                        <img src="./img/tip/sns.png" alt="SNS 공개 범위 설정">
+                        <span class="tip-number">01</span>
+                    </div>
+                    <div class="tip-card-gradient"></div>
+                    <div class="tip-card-content">
+                        <h2>SNS 공개 범위 설정하기</h2>
+                        <p>게시물, 스토리, 친구목록 등<br>공개 범위를 꼭 확인하세요.</p>
+                        <button type="button" class="tip-detail-button" data-modal-open="tip01"
+                            aria-label="SNS 공개 범위 설정 TIP 보기">→</button>
+                    </div>
+                </article>
+                <article class="tip-card" data-modal="tip02">
+                    <div class="tip-card-image">
+                        <img src="./img/tip/비밀번호.png" alt="비밀번호 관리">
+                        <span class="tip-number">02</span>
+                    </div>
+                    <div class="tip-card-gradient"></div>
+                    <div class="tip-card-content">
+                        <h2>비밀번호 주기적으로 변경하기</h2>
+                        <p>같은 비밀번호를 여러 사이트에서<br>사용하지 마세요.</p>
+                        <button type="button" class="tip-detail-button" data-modal-open="tip02"
+                            aria-label="비밀번호 관리 TIP 보기">→</button>
+                    </div>
+                </article>
+                <article class="tip-card" data-modal="tip03">
+                    <div class="tip-card-image">
+                        <img src="./img/tip/의심 링크.png" alt="의심스러운 링크">
+                        <span class="tip-number">03</span>
+                    </div>
+                    <div class="tip-card-gradient"></div>
+                    <div class="tip-card-content">
+                        <h2>의심스러운 링크 클릭 금지</h2>
+                        <p>출처가 불분명한 링크는<br>절대 클릭하지 마세요.</p>
+                        <button type="button" class="tip-detail-button" data-modal-open="tip03"
+                            aria-label="의심스러운 링크 TIP 보기">→</button>
+                    </div>
+                </article>
+                <article class="tip-card" data-modal="tip04">
+                    <div class="tip-card-image">
+                        <img src="./img/tip/온라인 쇼핑.png" alt="온라인 쇼핑 개인정보">
+                        <span class="tip-number">04</span>
+                    </div>
+                    <div class="tip-card-gradient"></div>
+                    <div class="tip-card-content">
+                        <h2>온라인 쇼핑 시 개인정보 확인</h2>
+                        <p>불필요한 개인정보 제공을 줄이고,<br>안전한 사이트인지 확인하세요.</p>
+                        <button type="button" class="tip-detail-button" data-modal-open="tip04"
+                            aria-label="온라인 쇼핑 개인정보 TIP 보기">→</button>
+                    </div>
+                </article>
+                <article class="tip-card" data-modal="tip05">
+                    <div class="tip-card-image">
+                        <img src="./img/tip/공공 와이파이.png" alt="공공 와이파이">
+                        <span class="tip-number">05</span>
+                    </div>
+                    <div class="tip-card-gradient"></div>
+                    <div class="tip-card-content">
+                        <h2>공공 와이파이 사용 주의</h2>
+                        <p>공공장소의 무료 와이파이는<br>개인정보가 노출될 위험이 있습니다.</p>
+                        <button type="button" class="tip-detail-button" data-modal-open="tip05"
+                            aria-label="공공 와이파이 TIP 보기">→</button>
+                    </div>
+                </article>
+                <article class="tip-card" data-modal="tip06">
+                    <div class="tip-card-image">
+                        <img src="./img/tip/계정 정리.png" alt="사용하지 않는 계정">
+                        <span class="tip-number">06</span>
+                    </div>
+                    <div class="tip-card-gradient"></div>
+                    <div class="tip-card-content">
+                        <h2>사용하지 않는 계정 정리하기</h2>
+                        <p>더 이상 사용하지 않는 계정은<br>삭제하거나 비활성화하세요.</p>
+                        <button type="button" class="tip-detail-button" data-modal-open="tip06"
+                            aria-label="사용하지 않는 계정 TIP 보기">→</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <div id="footer"></div>
+
+
+    <div class="tip-modal" id="tip01" aria-hidden="true">
+        <div class="tip-modal-dim"></div>
+        <div class="tip-modal-content">
+            <button type="button" class="tip-modal-close" aria-label="모달 닫기">×</button>
+            <div class="tip-modal-image">
+                <img src="./img/tip/안전한 SNS 공개 범위 설정 가이드.png" alt="SNS 공개 범위 설정">
+            </div>
+            <div class="tip-modal-info">
+                <span class="tip-modal-category">SNS</span>
+                <p class="tip-modal-number">TIP 01</p>
+                <h2 class="tip-modal-title">SNS 공개 범위<br>꼭 확인하기</h2>
+                <div class="tip-modal-line"></div>
+                <h3>왜 중요할까요?</h3>
+                <p class="tip-modal-description">SNS에 올린 사진과 게시물은 생각보다 많은 사람에게 공개될 수 있습니다. 공개 범위가 넓으면 내가 어디에 있는지, 누구와
+                    지내는지, 어떤 생활을 하는지까지 쉽게 파악될 수 있습니다.</p>
+                <h3>이렇게 해보세요</h3>
+                <ul class="tip-check-list">
+                    <li>게시물 공개 범위를 친구로 설정하기</li>
+                    <li>스토리 공개 대상을 주기적으로 확인하기</li>
+                    <li>친구목록과 팔로워를 정리하기</li>
+                    <li>현재 위치가 드러나는 사진은 주의해서 올리기</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="tip-modal" id="tip02" aria-hidden="true">
+        <div class="tip-modal-dim"></div>
+        <div class="tip-modal-content">
+            <button type="button" class="tip-modal-close" aria-label="모달 닫기">×</button>
+            <div class="tip-modal-image">
+                <img src="./img/tip/비밀번호를 지키는 해커의 책상.png" alt="비밀번호 관리">
+            </div>
+            <div class="tip-modal-info">
+                <span class="tip-modal-category">PASSWORD</span>
+                <p class="tip-modal-number">TIP 02</p>
+                <h2 class="tip-modal-title">비밀번호는<br>사이트마다 다르게</h2>
+                <div class="tip-modal-line"></div>
+                <h3>왜 중요할까요?</h3>
+                <p class="tip-modal-description">여러 사이트에서 같은 비밀번호를 사용하면 한 곳에서 계정 정보가 유출됐을 때 다른 서비스의 계정까지 위험해질 수 있습니다.
+                </p>
+                <h3>이렇게 해보세요</h3>
+                <ul class="tip-check-list">
+                    <li>사이트마다 다른 비밀번호 사용하기</li>
+                    <li>생일이나 전화번호처럼 추측하기 쉬운 정보 피하기</li>
+                    <li>영문, 숫자, 특수문자를 조합하기</li>
+                    <li>가능한 서비스에서는 2단계 인증 사용하기</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="tip-modal" id="tip03" aria-hidden="true">
+        <div class="tip-modal-dim"></div>
+        <div class="tip-modal-content">
+            <button type="button" class="tip-modal-close" aria-label="모달 닫기">×</button>
+            <div class="tip-modal-image">
+                <img src="./img/tip/의심스러운 링크를 조심하세요.png" alt="의심스러운 링크">
+            </div>
+            <div class="tip-modal-info">
+                <span class="tip-modal-category">LINK</span>
+                <p class="tip-modal-number">TIP 03</p>
+                <h2 class="tip-modal-title">의심스러운 링크는<br>한 번 더 확인하기</h2>
+                <div class="tip-modal-line"></div>
+                <h3>왜 중요할까요?</h3>
+                <p class="tip-modal-description">문자나 메신저로 전달된 링크를 무심코 클릭하면 가짜 로그인 페이지나 악성 사이트로 연결될 수 있습니다.</p>
+                <h3>이렇게 해보세요</h3>
+                <ul class="tip-check-list">
+                    <li>모르는 사람이 보낸 링크는 바로 클릭하지 않기</li>
+                    <li>무료 상품이나 과도한 혜택을 강조하는 링크 주의하기</li>
+                    <li>주소가 공식 사이트와 같은지 확인하기</li>
+                    <li>의심된다면 해당 서비스의 공식 앱이나 홈페이지에서 직접 확인하기</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="tip-modal" id="tip04" aria-hidden="true">
+        <div class="tip-modal-dim"></div>
+        <div class="tip-modal-content">
+            <button type="button" class="tip-modal-close" aria-label="모달 닫기">×</button>
+            <div class="tip-modal-image">
+                <img src="./img/tip/트리피샵 온라인 쇼핑 보안 체크리스트.png" alt="온라인 쇼핑 개인정보">
+            </div>
+            <div class="tip-modal-info">
+                <span class="tip-modal-category">SHOPPING</span>
+                <p class="tip-modal-number">TIP 04</p>
+                <h2 class="tip-modal-title">온라인 쇼핑할 때<br>개인정보 줄이기</h2>
+                <div class="tip-modal-line"></div>
+                <h3>왜 중요할까요?</h3>
+                <p class="tip-modal-description">쇼핑 과정에서는 이름, 전화번호, 주소 등 다양한 개인정보를 입력하게 됩니다. 꼭 필요한 정보인지 확인하고 불필요한 정보 제공은
+                    줄이는 것이 좋습니다.</p>
+                <h3>이렇게 해보세요</h3>
+                <ul class="tip-check-list">
+                    <li>결제 전에 입력되는 개인정보 확인하기</li>
+                    <li>불필요한 마케팅 정보 수신 동의 줄이기</li>
+                    <li>공식 쇼핑몰인지 주소를 확인하기</li>
+                    <li>택배 송장은 개인정보가 보이지 않게 버리기</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="tip-modal" id="tip05" aria-hidden="true">
+        <div class="tip-modal-dim"></div>
+        <div class="tip-modal-content">
+            <button type="button" class="tip-modal-close" aria-label="모달 닫기">×</button>
+            <div class="tip-modal-image">
+                <img src="./img/tip/공항 무료 와이파이 보안 가이드.png" alt="공공 와이파이">
+            </div>
+            <div class="tip-modal-info">
+                <span class="tip-modal-category">PUBLIC WI-FI</span>
+                <p class="tip-modal-number">TIP 05</p>
+                <h2 class="tip-modal-title">공공 와이파이<br>사용할 때 주의하기</h2>
+                <div class="tip-modal-line"></div>
+                <h3>왜 중요할까요?</h3>
+                <p class="tip-modal-description">카페나 공공장소에서 제공되는 무료 와이파이는 편리하지만 보안이 충분하지 않을 수 있습니다. 네트워크를 통해 개인정보가 노출될
+                    가능성도 있습니다.</p>
+                <h3>이렇게 해보세요</h3>
+                <ul class="tip-check-list">
+                    <li>공공 와이파이에서 중요한 계정 로그인 피하기</li>
+                    <li>온라인 금융이나 결제 이용 시 주의하기</li>
+                    <li>공식적으로 제공되는 네트워크인지 확인하기</li>
+                    <li>사용하지 않을 때는 와이파이 연결 끄기</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="tip-modal" id="tip06" aria-hidden="true">
+        <div class="tip-modal-dim"></div>
+        <div class="tip-modal-content">
+            <button type="button" class="tip-modal-close" aria-label="모달 닫기">×</button>
+            <div class="tip-modal-image">
+                <img src="./img/tip/사용하지 않는 계정 정리하기.png" alt="사용하지 않는 계정">
+            </div>
+            <div class="tip-modal-info">
+                <span class="tip-modal-category">ACCOUNT</span>
+                <p class="tip-modal-number">TIP 06</p>
+                <h2 class="tip-modal-title">사용하지 않는 계정은<br>깔끔하게 정리하기</h2>
+                <div class="tip-modal-line"></div>
+                <h3>왜 중요할까요?</h3>
+                <p class="tip-modal-description">오랫동안 사용하지 않은 계정에도 이름이나 이메일, 전화번호 같은 개인정보가 남아 있을 수 있습니다.</p>
+                <h3>이렇게 해보세요</h3>
+                <ul class="tip-check-list">
+                    <li>사용하지 않는 서비스와 SNS 계정 확인하기</li>
+                    <li>더 이상 필요하지 않은 계정 삭제하기</li>
+                    <li>삭제가 어렵다면 비활성화 여부 확인하기</li>
+                    <li>연결된 다른 서비스의 로그인 정보도 함께 확인하기</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
